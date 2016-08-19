@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Rich::VERSION
   s.authors     = ["Bastiaan Terhorst", "Nick Schmidt"]
   s.email       = ["bastiaan@perceptor.nl", "nick@kreativgebiet.com"]
-  s.homepage    = "https://github.com/kreativgebiet/rich"
+  s.homepage    = "https://github.com/davidkofahl/rich"
   s.summary     = "Rich is an opinionated WYSIWYG editor for Rails based on CKEditor."
   s.description = "Rich is an opinionated WYSIWYG editor for Rails based on CKEditor."
 
@@ -26,3 +26,4 @@ Gem::Specification.new do |s|
   #s.add_development_dependency "sqlite3"
   #s.add_development_dependency "formtastic"
 end
+
