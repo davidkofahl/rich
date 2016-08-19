@@ -5,11 +5,11 @@ require "rich/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "rich_syndicate"
+  s.name        = "rich"
   s.version     = Rich::VERSION
   s.authors     = ["Bastiaan Terhorst", "Nick Schmidt"]
   s.email       = ["bastiaan@perceptor.nl", "nick@kreativgebiet.com"]
-  s.homepage    = "https://github.com/davidkofahl/rich.git"
+  s.homepage    = "https://github.com/kreativgebiet/rich"
   s.summary     = "Rich is an opinionated WYSIWYG editor for Rails based on CKEditor."
   s.description = "Rich is an opinionated WYSIWYG editor for Rails based on CKEditor."
 
