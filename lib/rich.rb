@@ -77,7 +77,7 @@ module Rich
     :toolbar => [%w(Styles Format Font FontSize), %w(Bold Italic Underline Strike Subscript Superscript),
                  %w(JustifyLeft JustifyCenter JustifyRight JustifyBlock), %w(TextColor BGColor),
                  %w(RemoveFormat), %w(NumberedList BulletedList Blockquote), %w(Link Unlink),
-                 %w(richImage richFile MediaEmbed), %w(Source ShowBlocks), %w(imageCaptions)],
+                 %w(richImage richFile richImageCaptions MediaEmbed), %w(Source ShowBlocks)],
     :language => I18n.default_locale,
     :richBrowserUrl => '/rich/files/',
     :uiColor => '#f4f4f4'
