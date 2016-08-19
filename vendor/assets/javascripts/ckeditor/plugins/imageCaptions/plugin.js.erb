@@ -6,13 +6,16 @@ console.log('adding image captions');
 
 		init: function(editor) {
 
-			editor.addCommand( 'abbr', new CKEDITOR.dialogCommand( 'imgCaptionDialog' ) );
+			editor.addCommand( 'insertImageCaption', new CKEDITOR.dialogCommand( 'imgCaptionDialog' ) );
 
 			editor.ui.addButton( 'imageCaptions', {
 				label : "Add Image Caption",
 				command: 'insertImageCaption',
 				icon: "<%= asset_path 'rich/images.png' %>"
 			});
+
+			console.log('init');
+			console.log(this.path);
 
 			CKEDITOR.dialog.add( 'imgCaptionDialog', this.path + 'dialogs/captions.js' );
 
