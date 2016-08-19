@@ -2,31 +2,11 @@
 
 console.log('adding image captions');
 
-	CKEDITOR.plugins.add('imageCaptions',
-	{
-	    init: function(editor) {
+	CKEDITOR.plugins.add('imageCaptions', {
 
-			// register a callback that actually inserts a selected image
-			editor._.insertCaptionfn = CKEDITOR.tools.addFunction(function(url, id, name){
-				this.insertHtml('<img src="' + url + '" alt="" data-rich-file-id="' + id + '" />');
-			}, editor);
+		init: function(editor) {
 
-			// clean up the callback
-			editor.on( 'destroy', function () { CKEDITOR.tools.removeFunction( this._.insertCaptionfn ); } );
-
-			editor.addCommand( 'insertImageCaption', {
-				exec: function(editor) {
-					var params = {};
-					params.CKEditor = editor.name;
-					params.CKEditorFuncNum = editor._.insertCaptionfn;
-					//params.default_style = editor.config.default_style;
-					//params.allowed_styles = editor.config.allowed_styles;
-			
-					var url = addQueryString(editor.config.richBrowserUrl, params );
-					editor.popup(url, 860, 500);
-				}
-			});
-
+			editor.addCommand( 'abbr', new CKEDITOR.dialogCommand( 'imgCaptionDialog' ) );
 
 			editor.ui.addButton( 'imageCaptions', {
 				label : "Add Image Caption",
@@ -34,7 +14,9 @@ console.log('adding image captions');
 				icon: "<%= asset_path 'rich/images.png' %>"
 			});
 
-	    }
+			CKEDITOR.dialog.add( 'imgCaptionDialog', this.path + 'dialogs/captions.js' );
+
+		}
 	});
 
 })();
