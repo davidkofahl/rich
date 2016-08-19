@@ -69,12 +69,14 @@
 
 			editor.ui.addButton( 'richImage', {
 				label : "Browse and upload images",
-				command: 'insertRichImage'
+				command: 'insertRichImage',
+				icon: "<%= asset_path 'rich/images.png' %>"
 			});
 
 			editor.ui.addButton( 'richFile', {
 				label : "Browse and upload files",
-				command: 'insertRichFile'
+				command: 'insertRichFile',
+				icon: "<%= asset_path 'rich/files.png' %>"
 			});
 
 	    }
