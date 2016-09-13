@@ -1,7 +1,5 @@
 (function(){
 
-console.log('adding image captions');
-
 	CKEDITOR.plugins.add('imageCaptions', {
 
 		init: function(editor) {
@@ -11,11 +9,8 @@ console.log('adding image captions');
 			editor.ui.addButton( 'imageCaptions', {
 				label : "Add Image Caption",
 				command: 'insertImageCaption',
-				icon: "<%= asset_path 'rich/images.png' %>"
+				icon: this.path + 'icons/caption.png'
 			});
-
-			console.log('init');
-			console.log(this.path);
 
 			CKEDITOR.dialog.add( 'imgCaptionDialog', this.path + 'dialogs/captions.js' );
 
